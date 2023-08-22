@@ -5,6 +5,7 @@
 ### 1. Apresentação do projeto e metodologia
 O projeto é criar um site de hamburgueria usando Django 4 e Bootstrap 5.
 
+
 ## Seção 2 - Fundamentos de projetos e aplicações Django
 
 ### 2. Principais características do Django Framework
@@ -48,6 +49,13 @@ Em burguer>urls.py remover `path('admin/', admin.site.urls)` e adicionar `path('
 ## Seção 3 - Introdução aos templates HTML
 
 ### 5. Renderizando templates HTML. Templates reutilizáveis com o uso de Extends
+Na pasta "templates", criar uma subpasta "burguer".
+
+Usar um arquivo html como base para os outros templates. 
+A base conterá a maior parte do código html e alguns blocos, como título e conteúdo, que serão modificados pelos outros
+templates que o extenderem.
+
+Para usar os htmls criados deve-se indicá-los em funções de views.py.
 
 
 ## Seção 4 - Fundamentos do Djando Admin, CRUD e arquivos estáticos
