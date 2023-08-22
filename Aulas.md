@@ -61,9 +61,26 @@ Para usar os htmls criados deve-se indicá-los em funções de views.py.
 ## Seção 4 - Fundamentos do Djando Admin, CRUD e arquivos estáticos
 
 ### 6. Djando Admin, Migrations, Criação de superuser, CRUD Djando Admin
+Criar os primeiros models, que contém campos e comportamentos essenciais. 
+O arquivo referente a models é models.py que está burguer.
 
+Em models.py, criar a classe Produto. 
+
+Depois de criar algum model, deve-se executar os comandos `python manage.py makemigrations` ("é semelhante com git add"),
+`python manage.py migrate`, `python manage.py createsuperuser`.
+
+Em burguer>admin.py registramos os models.
 
 ### 7. Trabalhando com arquivos estáticos (Imagens, CSS e JavaScript)
+
+Para adicionar imagens, altere a classe produto, execute os comandos `python manage.py makemigrations` 
+e `python manage.py migrate`, e faça configurações adicionais. 
+
+Em templates>burguer, criar produto.html. 
+
+Em pyburguer>settings.py, defina STATIC_ROOT, MEDIA_URL e MEDIA_ROOT.
+
+Em burguer>urls.py, adicionar o path de produto e dos arquivos estáticos.
 
 
 ## Seção 5 - Layout e Bootstrap
