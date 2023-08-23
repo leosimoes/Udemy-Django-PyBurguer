@@ -1,1 +1,23 @@
 {% extends 'burguer/base.html' %}
+{% load static %}
+
+{% block titulo %} Produto {% endblock %}
+
+{% block navbar %}
+  {% include 'burguer/fragments/navbar.html' %}
+{% endblock %}
+
+{% block banner %} {% endblock %}
+
+{% block conteudo %}
+    <div class="col-md-6 offset-3 d-flex flex-column justify-content-center align-items-center vh-100">
+        <h1 class="text-danger text-center mb-5">{{ produto.descricao }}</h1>
+
+        <img src="{{ produto.imagem.url }}"
+             class="card-img-top"
+             alt="hamburguer"
+             style="height:450px;width:450px"/>
+
+        <div class="span display-4 text-info"> Apenas R${{ produto.preco}}</div>
+    </div>
+{% endblock %}

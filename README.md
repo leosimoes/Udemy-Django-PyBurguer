@@ -27,14 +27,35 @@
 18. python manage.py createsuperuser
 19. Em burguer>admin.py, registre a model Produto com `admin.site.register(Produto)`.
 20. Acesse '/admin/' do localhost com as credeciais criadas para o superuser para verificar a implementação.
-
 ![Django-admin](/printscreens/Django-admin-V1.png)
-
 21. Adicione o campo de imagem na classe Produto.
 22. Em pyburguer>settings.py, defina STATIC_ROOT, MEDIA_URL e MEDIA_ROOT.
 23. Em templates>burguer, criar produto.html.
 24. Em burguer>urls.py, adicionar o path de produto e dos arquivos estáticos.
 25. Executar os comandos `python manage.py makemigrations` e `python manage.py migrate`.
+### Seção 5:
+26. Criar pasta fragments dentro da templates>burguer.
+27. Em templates>burguer>fragments, criar navbar.html e colar um dos exemplos de
+https://getbootstrap.com/docs/5.1/components/navbar/
+28. Editar base.html para adicionar div com bootstrap, navbar entre tags headers, e conteúdo entre tags main.
+29. Editar home.html. 
+30. Editar navbar.html, alterando o nome de titulo, remover dropdown menu e elemento disable.
+31. Editar navbar.html, adicionar a classe "ms-auto" para `<ul>` para alinhar elementos ao centro.
+32. Editar navbar.html, adicionar botão de login, botão de cadastre-se.
+33. Em base.html, linkar font awesome para adicionar imagens.
+34. Em base.html, mudar a tag de header para nav, e colocar o nome do bloco de navbar também em home.html.
+35. Em burguer>fragments, criar o arquivo banner.html.
+36. Incluir bloco banner em base.html e home.html.
+37. Em burguer, criar diretorio static/burguer.
+38. Em burguer>static>burguer, adicionar o arquivo de imagem `burguer_slide.png`.
+39. Em burguer>urls.py, substituir MEDIA_URL por STATIC_URL e MEDIA_ROOT por STATIC_ROOT.
+40. Em burguer>fragments, criar o arquivo conteudo.html.
+41. Incluir bloco conteudo em base.html e home.html.
+42. Em views, alterar função home.
+43. Fazer outras modificações para fazer tudo funcionar.
+
+![Site-Home-V1](/printscreens/Site-Home-V1.png)
+
 
 Obs.: pyburguer é o core.
 
