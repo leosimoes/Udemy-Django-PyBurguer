@@ -11,13 +11,15 @@
 
 {% block conteudo %}
     <div class="col-md-6 offset-3 d-flex flex-column justify-content-center align-items-center vh-100">
-        <h1 class="text-danger text-center mb-5">{{ produto.descricao }}</h1>
+        <h1 class="text-danger text-center mb-5">{{ produto.nome }}</h1>
+
+        <h3 class="text-danger text-center mb-5">{{ produto.descricao }}</h3>
 
         <img src="{{ produto.imagem.url }}"
              class="card-img-top"
              alt="hamburguer"
              style="height:450px;width:450px"/>
 
-        <div class="span display-4 text-info"> Apenas R${{ produto.preco}}</div>
+        <div class="span display-4 text-info"> Apenas R${{ produto.preco | floatformat:2 }}</div>
     </div>
 {% endblock %}

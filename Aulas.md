@@ -134,11 +134,39 @@ Alterar as funções das views, rotas e htmls para que os produtos possam ser ut
 
 Verificar usos de MEDIA_URL, STATIC_URL, MEDIA_ROOT e STATIC_ROOT de settings.py.
 
+
 ## Seção 6 - QuerySet API e Recuperação de informações a partir do Banco de Dados
 
 ### 12. Django Shell e manipulações básicas de objetos e QuerySet API
+Para adicionar novos produtos, usaremos o Django Shell ao invés do Django Admin.
+
+No terminal, execute `pip install iPython`, `python manage.py shell`, e depois `python manage.py shell` para abir o shell.
+No shell, adicione algum hamburguer:
+`
+
+    from burguer.models import Produto
+    
+    produto = Produto()
+    
+    produto.descricao = 'Artesanal'
+    
+    produto.preco = 19.99
+    
+    produto.imagem = ''
+    
+    produto.save()
+    
+    produtos = Produto.objects.all()
+
+    produtos
+`
 
 ### 13. Objetos de Contexto + Carregamento de informações a partir do Banco de Dados
+Na classe Produto, adicione o campo `nome` e adicione um valor para nome de cada produto e altere os valores de descrição. 
+Nos arquivos de templates, corrija as referências destes campos.
+
+Para referenciar preço corretamente use `R${{ produto.preco | floatformat:2 }}` e altere o idioma para "pt-br" em
+settings.py e base.html.
 
 
 ## Seção 7 - Fundamentos da navegação entre páginas
@@ -148,7 +176,6 @@ Verificar usos de MEDIA_URL, STATIC_URL, MEDIA_ROOT e STATIC_ROOT de settings.py
 ### 15. Template para detalhamento do produto
 
 ### 16. Link para a página inicial
-
 
 ## Seção 8 - Carregamento de imagens armazenadas no Banco de Dados
 

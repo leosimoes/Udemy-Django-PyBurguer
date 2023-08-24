@@ -17,10 +17,11 @@
                     <div class="card bg-warning p-5">
 
                         <a href="{% url 'produto' produto.id %}">
-                            <h3 class="card-title text-danger"> {{ produto.descricao }}</h3>
+                            <h1 class="card-title text-danger text-center"> {{ produto.nome }}</h1>
+                            <p class="card-title text-secondary"> {{ produto.descricao }}</p>
                             <div class="card-body">
                                 <img src="{{ produto.imagem.url }}" class="card-img-top" alt="hamburguer">
-                                <div class="span display-4 text-end mx-3 text-danger"> R${{produto.preco}} </div>
+                                <div class="span display-4 text-end mx-3 text-danger text-center"> R${{ produto.preco | floatformat:2 }} </div>
                             </div>
                         </a>
                     </div>
