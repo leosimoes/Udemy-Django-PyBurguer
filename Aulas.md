@@ -181,8 +181,15 @@ em conteudo.html colocar link `<a href="{% url 'produto' produto.id %}">`.
 ### 16. Link para a página inicial
 Em navbar.html, adicionar link para home com `<a href="{% url 'home' %}">PyBurguer</a>`.
 
+
 ## Seção 8 - Carregamento de imagens armazenadas no Banco de Dados
 
 ### 17. Recuperando imagens cadastrados via processo de upload (MEDIA_URL e MEDIA_ROOT)
+Usar MEDIAR_URL e MEDIA_ROOT, ao invés de STATIC_URL e STATIC_ROOT, para acessar imagens da base dados provenientes de upload.
+STATIC_URL e STATIC_ROOT devem ser usadas quando carregar alguma imagem que não seja por upload dinâmico.
+
+Em conteúdo.html e produto.html use `<img src="{{ produto.imagem.url }}" alt="hamburguer"/>` para carregar as imagens 
+do banco de dados.
 
 ### 18. Download do código-fonte
+https://github.com/academiapython/pyburguer

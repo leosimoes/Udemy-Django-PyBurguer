@@ -2,12 +2,12 @@
 
 ## Passos
 
-### Seção 1:
+### Seção 1 - O que faremos durante o curso? Como o conteúdo será apresentado?
 1. Criar projeto Django no PyCharm com nome "burguer":
 
 ![PyCharm-Django-Starter](/printscreens/PyCharm-Django-Starter-PyBurguer.png)
 
-### Seção 2:
+### Seção 2 - Fundamentos de projetos e aplicações Django
 2. Na pasta burguer, criar urls.py. 
 3. Copiar o conteúdo de core>urls.py para burguer>urls.py.
 4. Em views.py criar uma função home.
@@ -15,13 +15,13 @@
 6. Em pyburguer>urls.py, adicionar `path('', include('burguer.urls'))` e burguer>urls.py.
 7. Em pyburguer>settings.py verificar se a aplicação 'burguer' está em INSTALLED_APPS.
 
-### Seção 3:
+### Seção 3 - Introdução aos templates HTML
 8. Na pasta "templates", criar uma subpasta "burguer".
 9. Em templates>burguer, criar base.html que serivrá extendido pelos demais templates.
 10. Em templates>burguer, criar home.html que extende base.html.
 11. Em views.py, alterar função home para usar o home.html.
 
-### Seção 4:
+### Seção 4 - Fundamentos do Djando Admin, CRUD e arquivos estáticos
 12. Em burguer>settings.py verifique as configurações do banco de dados no dicionário DATABASES.
 13. Em models.py, criar a classe Produto.
 14. Executar o comando `python manage.py makemigrations`.
@@ -45,7 +45,7 @@
 
 ![Terminal-Migration-0002](/printscreens/Terminal-Migration-0002.png)
 
-### Seção 5:
+### Seção 5 - Layout e Bootstrap
 26. Criar pasta fragments dentro da templates>burguer.
 27. Em templates>burguer>fragments, criar navbar.html e colar um dos exemplos de
 https://getbootstrap.com/docs/5.1/components/navbar/
@@ -68,7 +68,7 @@ https://getbootstrap.com/docs/5.1/components/navbar/
 
 ![Site-Home-V1](/printscreens/Site-Home-V1.png)
 
-### Seção 6:
+### Seção 6 - QuerySet API e Recuperação de informações a partir do Banco de Dados
 44. (Opcional) No terminal, execute `pip install iPython` e `python manage.py shell`.
 45. (Opcional) No terminal, execute `python manage.py shell` para abir o shell.
 46. (Opcional) No shell, adicione algum hamburguer:
@@ -103,13 +103,18 @@ https://getbootstrap.com/docs/5.1/components/navbar/
 
 ![Site-Home-V2](/printscreens/Site-Home-V2.png)
 
-### Seção 7:
+### Seção 7 - Fundamentos da navegação entre páginas
 52. (Já foi feito antes - Seção 5) Para adicionar uma página para cada produto, criar produto.html sem banner, 
 em burguer>urls.py criar uma função para tratar da rota, em burguer>views.py criar função `detalhe_produto()`, 
 em conteudo.html colocar link `<a href="{% url 'produto' produto.id %}">`.
 53. Em navbar.html, adicionar link para home com `<a href="{% url 'home' %}">PyBurguer</a>`.
 
 ![Site-BigMac-V2](/printscreens/Site-BigMac-V2.png)
+
+### Seção 8 - Carregamento de imagens armazenadas no Banco de Dados
+54. (Já foi feito antes - Seção 5) Em burguer>urls.py, use MEDIAR_URL e MEDIA_ROOT, ao invés de STATIC_URL e STATIC_ROOT.
+55. (Já foi feito antes - Seção 5) Em conteúdo.html e produto.html use `<img src="{{ produto.imagem.url }}" alt="hamburguer"/>` para carregar as imagens 
+do banco de dados.
 
 Obs.: pyburguer é o core.
 
