@@ -29,12 +29,14 @@
 16. Executar o comando `python manage.py createsuperuser` e configurar login e password.
 
 ![Terminal-SuperUser](/printscreens/Terminal-Create-super-user.png)
+
 17. (Opcional) Configurar o runserver
 18. python manage.py createsuperuser
 19. Em burguer>admin.py, registre a model Produto com `admin.site.register(Produto)`.
 20. Acesse '/admin/' do localhost com as credeciais criadas para o superuser para verificar a implementação.
 
 ![Django-admin](/printscreens/Django-admin-V1.png)
+
 21. Adicione o campo de imagem na classe Produto.
 22. Em pyburguer>settings.py, defina STATIC_ROOT, MEDIA_URL e MEDIA_ROOT.
 23. Em templates>burguer, criar produto.html.
@@ -101,6 +103,13 @@ https://getbootstrap.com/docs/5.1/components/navbar/
 
 ![Site-Home-V2](/printscreens/Site-Home-V2.png)
 
+### Seção 7:
+52. (Já foi feito antes - Seção 5) Para adicionar uma página para cada produto, criar produto.html sem banner, 
+em burguer>urls.py criar uma função para tratar da rota, em burguer>views.py criar função `detalhe_produto()`, 
+em conteudo.html colocar link `<a href="{% url 'produto' produto.id %}">`.
+53. Em navbar.html, adicionar link para home com `<a href="{% url 'home' %}">PyBurguer</a>`.
+
+![Site-BigMac-V2](/printscreens/Site-BigMac-V2.png)
 
 Obs.: pyburguer é o core.
 

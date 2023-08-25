@@ -174,8 +174,12 @@ settings.py e base.html.
 ### 14. Deep Link e sistemas de rotas e passagens de parâmetros
 
 ### 15. Template para detalhamento do produto
+Criar (se não tiver feito) produto.html sem banner, 
+em burguer>urls.py criar uma função para tratar da rota, em burguer>views.py criar função `detalhe_produto()`, 
+em conteudo.html colocar link `<a href="{% url 'produto' produto.id %}">`.
 
 ### 16. Link para a página inicial
+Em navbar.html, adicionar link para home com `<a href="{% url 'home' %}">PyBurguer</a>`.
 
 ## Seção 8 - Carregamento de imagens armazenadas no Banco de Dados
 
